@@ -3,10 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.company</groupId>
-    <artifactId>entrega-12-parent</artifactId>
+    <artifactId>subproceso_PAI-parent</artifactId>
     <version>0.0.1</version>
   </parent>
-  <artifactId>entrega-12</artifactId>
+  <artifactId>subproceso_PAI</artifactId>
   <name>Entrega 1.2</name>
   <dependencies>
     <dependency>
