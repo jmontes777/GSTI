@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
   <process:MainProcess xmi:id="_jKP8QLvoEfGmLL8pINuU7A" name="MiDiagrama" bonitaModelVersion="9">
-    <elements xmi:type="process:Pool" xmi:id="_jKP8QbvoEfGmLL8pINuU7A" name="Pool">
-      <elements xmi:type="process:Lane" xmi:id="_jKP8QrvoEfGmLL8pINuU7A" name="Empleado (lane) " actor="_jKQjZLvoEfGmLL8pINuU7A">
+    <elements xmi:type="process:Pool" xmi:id="_jKP8QbvoEfGmLL8pINuU7A" name="Diálisis Peritoneal Domiciliaria">
+      <elements xmi:type="process:Lane" xmi:id="_jKP8QrvoEfGmLL8pINuU7A" name="Paciente / Cuidador Familiar " actor="_jKQjZLvoEfGmLL8pINuU7A">
         <elements xmi:type="process:StartEvent" xmi:id="_jKP8Q7voEfGmLL8pINuU7A" name="Inicio1" outgoing="_jKQjYbvoEfGmLL8pINuU7A">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_jKP8RLvoEfGmLL8pINuU7A" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_jKP8RbvoEfGmLL8pINuU7A" name="" content="" returnTypeFixed="true"/>
@@ -24,7 +24,8 @@
           <expectedDuration xmi:type="expression:Expression" xmi:id="_jKQjXLvoEfGmLL8pINuU7A" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
       </elements>
-      <elements xmi:type="process:Lane" xmi:id="_gXCbgLvtEfG8mPXYfZvL2Q" name="Senda1"/>
+      <elements xmi:type="process:Lane" xmi:id="_gXCbgLvtEfG8mPXYfZvL2Q" name="Enfermería Nefrológica"/>
+      <elements xmi:type="process:Lane" xmi:id="_EhXqQLvvEfGmLL8pINuU7A" name="Unidad de Diálisis"/>
       <formMapping xmi:type="process:FormMapping" xmi:id="_jKQjXbvoEfGmLL8pINuU7A">
         <targetForm xmi:type="expression:Expression" xmi:id="_jKQjXrvoEfGmLL8pINuU7A" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
@@ -99,7 +100,16 @@
           <styles xmi:type="notation:FontStyle" xmi:id="_gXGs8rvtEfG8mPXYfZvL2Q" fontName="Segoe UI"/>
           <styles xmi:type="notation:LineStyle" xmi:id="_gXGs87vtEfG8mPXYfZvL2Q"/>
           <styles xmi:type="notation:FillStyle" xmi:id="_gXHUArvtEfG8mPXYfZvL2Q"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gXGs9LvtEfG8mPXYfZvL2Q" x="115" y="180"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gXGs9LvtEfG8mPXYfZvL2Q" x="48" y="250" width="777" height="400"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_EhZfcLvvEfGmLL8pINuU7A" type="3007" element="_EhXqQLvvEfGmLL8pINuU7A">
+          <children xmi:type="notation:DecorationNode" xmi:id="_EhaGgLvvEfGmLL8pINuU7A" type="5007"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_EhaGgbvvEfGmLL8pINuU7A" type="7002"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_EhZfcbvvEfGmLL8pINuU7A"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_EhZfcrvvEfGmLL8pINuU7A" fontName="Segoe UI"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_EhZfc7vvEfGmLL8pINuU7A"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_EhaGgrvvEfGmLL8pINuU7A"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EhZfdLvvEfGmLL8pINuU7A" x="48" y="650" width="777" height="250"/>
         </children>
       </children>
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_jKQjkbvoEfGmLL8pINuU7A"/>
