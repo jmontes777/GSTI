@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ASCII"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1">
+  <customUserInfoDefinitions/>
+  <users>
+    <user userName="aitlop">
+      <firstName>Aitor</firstName>
+      <lastName>L&#xf3;pez</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="anvel">
+      <firstName>Ana</firstName>
+      <lastName>Vela</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="guigut">
+      <firstName>Guillermo</firstName>
+      <lastName>Guti&#xe9;rrez</lastName>
+      <personalData/>
+      <professionalData>
+        <email>mibufer44@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="marlop">
+      <firstName>Marina</firstName>
+      <lastName>L&#xf3;pez</lastName>
+      <personalData/>
+      <professionalData>
+        <email>jmonteszafra@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+  </users>
+  <roles>
+    <role name="RolPaciente ">
+      <displayName>RolPaciente</displayName>
+    </role>
+    <role name="RolCuidador">
+      <displayName>RolCuidador</displayName>
+    </role>
+    <role name="RolEnfermeria">
+      <displayName>RolEnfermeria</displayName>
+    </role>
+    <role name="RolNefrologia">
+      <displayName>RolNefrologia</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="Pacientes">
+      <displayName>Pacientes</displayName>
+    </group>
+    <group name="PersonalSanitario">
+      <displayName>PersonalSanitario</displayName>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>aitlop</userName>
+      <roleName>RolPaciente </roleName>
+      <groupName>Pacientes</groupName>
+    </membership>
+    <membership>
+      <userName>anvel</userName>
+      <roleName>RolCuidador</roleName>
+      <groupName>Pacientes</groupName>
+    </membership>
+    <membership>
+      <userName>guigut</userName>
+      <roleName>RolEnfermeria</roleName>
+      <groupName>PersonalSanitario</groupName>
+    </membership>
+    <membership>
+      <userName>marlop</userName>
+      <roleName>RolNefrologia</roleName>
+      <groupName>PersonalSanitario</groupName>
+    </membership>
+  </memberships>
+</organization:Organization>

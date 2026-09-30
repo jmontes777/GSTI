@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0">
+    <businessObjects>
+        <businessObject qualifiedName="com.company.model.RegistroDiario">
+            <fields>
+                <field type="LOCALDATE" length="255" name="fechaRegistro" nullable="false" collection="false">
+                    <description>Fecha del día en que se realiza el registro</description>
+                </field>
+                <field type="DOUBLE" length="255" name="peso" nullable="false" collection="false">
+                    <description>Peso actual en kg</description>
+                </field>
+                <field type="STRING" length="64" name="tensionArterial" nullable="false" collection="false">
+                    <description>Tension arterial en formato xx/xx</description>
+                </field>
+                <field type="INTEGER" length="255" name="ultraFiltracion" nullable="false" collection="false">
+                    <description>Cantidad de líquido que se ha eliminado del organismo en mL</description>
+                </field>
+                <field type="STRING" length="255" name="aspectoLiquido" nullable="false" collection="false">
+                    <description>Descripción del aspecto del líquido que hemos eliminado</description>
+                </field>
+                <field type="STRING" length="255" name="integridadOrificio" nullable="false" collection="false">
+                    <description>Estado de salud, cierre y ausencia de lesiones o infecciones del orificio (dar una breve descripción)</description>
+                </field>
+                <field type="BOOLEAN" length="255" name="alertaClinica" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>
