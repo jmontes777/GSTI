@@ -23,11 +23,11 @@
           <contract xmi:type="process:Contract" xmi:id="_qsF_QLv3EfG8mPXYfZvL2Q"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_qsF_Q7v3EfG8mPXYfZvL2Q" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_rD4NILv3EfG8mPXYfZvL2Q" name="Registrar constantes en la App: peso, TA y ultrafiltración diaria" outgoing="_Qnz-Abv3EfG8mPXYfZvL2Q" incoming="_KM_2s7v3EfG8mPXYfZvL2Q" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_rD4NILv3EfG8mPXYfZvL2Q" name="Registrar constantes en la App: peso, TA y ultrafiltración diaria" outgoing="_Qnz-Abv3EfG8mPXYfZvL2Q" incoming="_KM_2s7v3EfG8mPXYfZvL2Q" type="STANDARD" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_KM_Pobv3EfG8mPXYfZvL2Q" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_KM_PoLv3EfG8mPXYfZvL2Q" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_KM_Porv3EfG8mPXYfZvL2Q" name="" content="" returnTypeFixed="true"/>
-          <loopCondition xmi:type="expression:Expression" xmi:id="_KM_Po7v3EfG8mPXYfZvL2Q" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_KM_Po7v3EfG8mPXYfZvL2Q" name="loopWhile()" content="true" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_KM_PpLv3EfG8mPXYfZvL2Q" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_KM_Ppbv3EfG8mPXYfZvL2Q" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_KM_Pp7v3EfG8mPXYfZvL2Q" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
@@ -271,13 +271,13 @@
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_fpeJ4bv4EfGmLL8pINuU7A"/>
         <condition xmi:type="expression:Expression" xmi:id="_fpeJ4rv4EfGmLL8pINuU7A" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_k42_4Lv4EfGmLL8pINuU7A" name="No" target="_MJ9aALv0EfGmLL8pINuU7A" source="_AYbFoLv0EfGmLL8pINuU7A">
+      <connections xmi:type="process:SequenceFlow" xmi:id="_k42_4Lv4EfGmLL8pINuU7A" name="No" target="_MJ9aALv0EfGmLL8pINuU7A" source="_AYbFoLv0EfGmLL8pINuU7A" isDefault="true">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_k42_4bv4EfGmLL8pINuU7A"/>
         <condition xmi:type="expression:Expression" xmi:id="_k42_4rv4EfGmLL8pINuU7A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_nzoH4Lv4EfGmLL8pINuU7A" name="Si" target="_2nEgULvzEfGmLL8pINuU7A" source="_AYbFoLv0EfGmLL8pINuU7A">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_nzou8Lv4EfGmLL8pINuU7A"/>
-        <condition xmi:type="expression:Expression" xmi:id="_nzou8bv4EfGmLL8pINuU7A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_nzou8bv4EfGmLL8pINuU7A" name="newScript()" content="true" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_69QEILv4EfGmLL8pINuU7A" target="_UbrYkLv0EfGmLL8pINuU7A" source="_p5MisLv3EfG8mPXYfZvL2Q">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_69QrMLv4EfGmLL8pINuU7A"/>
