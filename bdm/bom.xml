@@ -6,12 +6,13 @@
                 <field type="LOCALDATE" length="255" name="fechaRegistro" nullable="false" collection="false">
                     <description>Fecha del día en que se realiza el registro</description>
                 </field>
-                <field type="DOUBLE" length="255" name="peso" nullable="false" collection="false">
+                <field type="INTEGER" length="255" name="peso" nullable="false" collection="false">
                     <description>Peso actual en kg</description>
                 </field>
                 <field type="STRING" length="64" name="tensionArterial" nullable="false" collection="false">
                     <description>Tension arterial en formato xx/xx</description>
                 </field>
+                <field type="LOCALDATETIME" length="255" name="horaRegistro" nullable="false" collection="false"/>
                 <field type="INTEGER" length="255" name="ultraFiltracion" nullable="false" collection="false">
                     <description>Cantidad de líquido que se ha eliminado del organismo en mL</description>
                 </field>

@@ -18,184 +18,164 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_Cj8aqLv3EfG8mPXYfZvL2Q" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_Cj8ap7v3EfG8mPXYfZvL2Q" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_qsF_Qbv3EfG8mPXYfZvL2Q">
-            <targetForm xmi:type="expression:Expression" xmi:id="_mIopIL3OEfGtKM1b_VjOvA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_21IMcL5OEfGmwNutk-CgvQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_qsF_QLv3EfG8mPXYfZvL2Q"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_qsF_Q7v3EfG8mPXYfZvL2Q" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_rD4NILv3EfG8mPXYfZvL2Q" name="Registrar constantes en la App: fecha, peso, TA, ultrafiltración diaria, aspecto del líquido e integridad del orificio" outgoing="_p2Z40L11EfGtKM1b_VjOvA" incoming="_KM_2s7v3EfG8mPXYfZvL2Q" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_rD4NILv3EfG8mPXYfZvL2Q" name="Registrar constantes en la App: fecha, peso, TA e integridad del orificio" outgoing="_7IlUwL5FEfGpf81S66oShw" incoming="_KM_2s7v3EfG8mPXYfZvL2Q" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_KM_Pobv3EfG8mPXYfZvL2Q" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_KM_PoLv3EfG8mPXYfZvL2Q" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_KM_Porv3EfG8mPXYfZvL2Q" name="" content="" returnTypeFixed="true"/>
-          <operations xmi:type="expression:Operation" xmi:id="_jGQkULy9EfGra9j5f3nQKg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_jGQkUby9EfGra9j5f3nQKg" name="registroDiario" content="registroDiario" type="TYPE_VARIABLE" returnType="com.company.model.RegistroDiario">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_jGQkUry9EfGra9j5f3nQKg" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
+          <operations xmi:type="expression:Operation" xmi:id="_4YfHiL5MEfGpf81S66oShw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_4YfHib5MEfGpf81S66oShw" name="registroDiario" content="registroDiario" type="TYPE_VARIABLE" returnType="com.company.model.RegistroDiario">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_4YfHir5MEfGpf81S66oShw" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_jGQkU7y9EfGra9j5f3nQKg" name="fecha" content="registroDiario.fechaRegistro" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_TlzqALzEEfGra9j5f3nQKg" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_4YfHi75MEfGpf81S66oShw" name="registroDiarioInput.fechaRegistro" content="registroDiarioInput?.fechaRegistro" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_4YfHjL5MEfGpf81S66oShw" name="registroDiarioInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_jGQkVby9EfGra9j5f3nQKg" type="JAVA_METHOD" expression="setFechaRegistro">
+            <operator xmi:type="expression:Operator" xmi:id="_4YfHjb5MEfGpf81S66oShw" type="JAVA_METHOD" expression="setFechaRegistro">
               <inputTypes>java.time.LocalDate</inputTypes>
             </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_jGQkVry9EfGra9j5f3nQKg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_jGQkV7y9EfGra9j5f3nQKg" name="registroDiario" content="registroDiario" type="TYPE_VARIABLE" returnType="com.company.model.RegistroDiario">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_jGQkWLy9EfGra9j5f3nQKg" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
+          <operations xmi:type="expression:Operation" xmi:id="_4YfHjr5MEfGpf81S66oShw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_4YfHj75MEfGpf81S66oShw" name="registroDiario" content="registroDiario" type="TYPE_VARIABLE" returnType="com.company.model.RegistroDiario">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_4YfHkL5MEfGpf81S66oShw" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_jGQkWby9EfGra9j5f3nQKg" name="peso" content="registroDiario.peso" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Double">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_V3Cs0LzEEfGra9j5f3nQKg" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_4YfHkb5MEfGpf81S66oShw" name="registroDiarioInput.peso" content="registroDiarioInput?.peso" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_4YfHkr5MEfGpf81S66oShw" name="registroDiarioInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_jGQkW7y9EfGra9j5f3nQKg" type="JAVA_METHOD" expression="setPeso">
-              <inputTypes>java.lang.Double</inputTypes>
-            </operator>
-          </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_jGQkXLy9EfGra9j5f3nQKg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_jGQkXby9EfGra9j5f3nQKg" name="registroDiario" content="registroDiario" type="TYPE_VARIABLE" returnType="com.company.model.RegistroDiario">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_jGQkXry9EfGra9j5f3nQKg" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_jGQkX7y9EfGra9j5f3nQKg" name="ta" content="registroDiario.tensionArterial" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Yb7EYLzEEfGra9j5f3nQKg" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_jGQkYby9EfGra9j5f3nQKg" type="JAVA_METHOD" expression="setTensionArterial">
-              <inputTypes>java.lang.String</inputTypes>
-            </operator>
-          </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_qFyTgLzDEfGra9j5f3nQKg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_qFyTgbzDEfGra9j5f3nQKg" name="registroDiario" content="registroDiario" type="TYPE_VARIABLE" returnType="com.company.model.RegistroDiario">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_qhuBkLzDEfGra9j5f3nQKg" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_qFyTgrzDEfGra9j5f3nQKg" name="ultrafiltracion" content="registroDiario.ultraFiltracion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_aUB1gLzEEfGra9j5f3nQKg" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_qFyTg7zDEfGra9j5f3nQKg" type="JAVA_METHOD" expression="setUltraFiltracion">
+            <operator xmi:type="expression:Operator" xmi:id="_4YfHk75MEfGpf81S66oShw" type="JAVA_METHOD" expression="setPeso">
               <inputTypes>java.lang.Integer</inputTypes>
             </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_0jRmELzDEfGra9j5f3nQKg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_0jRmEbzDEfGra9j5f3nQKg" name="registroDiario" content="registroDiario" type="TYPE_VARIABLE" returnType="com.company.model.RegistroDiario">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_05NZ0LzDEfGra9j5f3nQKg" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
+          <operations xmi:type="expression:Operation" xmi:id="_4YfHlL5MEfGpf81S66oShw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_4YfHlb5MEfGpf81S66oShw" name="registroDiario" content="registroDiario" type="TYPE_VARIABLE" returnType="com.company.model.RegistroDiario">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_4YfHlr5MEfGpf81S66oShw" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_0jRmErzDEfGra9j5f3nQKg" name="aspecto" content="registroDiario.aspectoLiquido" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_cBWS8LzEEfGra9j5f3nQKg" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_4YfHl75MEfGpf81S66oShw" name="registroDiarioInput.tensionArterial" content="registroDiarioInput?.tensionArterial" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_4YfHmL5MEfGpf81S66oShw" name="registroDiarioInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_0jRmE7zDEfGra9j5f3nQKg" type="JAVA_METHOD" expression="setAspectoLiquido">
+            <operator xmi:type="expression:Operator" xmi:id="_4YfHmb5MEfGpf81S66oShw" type="JAVA_METHOD" expression="setTensionArterial">
               <inputTypes>java.lang.String</inputTypes>
             </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_9warELzDEfGra9j5f3nQKg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_9warEbzDEfGra9j5f3nQKg" name="registroDiario" content="registroDiario" type="TYPE_VARIABLE" returnType="com.company.model.RegistroDiario">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_-8k8MLzDEfGra9j5f3nQKg" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
+          <operations xmi:type="expression:Operation" xmi:id="_4YfHmr5MEfGpf81S66oShw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_4YfHm75MEfGpf81S66oShw" name="registroDiario" content="registroDiario" type="TYPE_VARIABLE" returnType="com.company.model.RegistroDiario">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_4YfHnL5MEfGpf81S66oShw" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_9warErzDEfGra9j5f3nQKg" name="integridad" content="registroDiario.integridadOrificio" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_diadELzEEfGra9j5f3nQKg" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_4YfHnb5MEfGpf81S66oShw" name="registroDiarioInput.integridadOrificio" content="registroDiarioInput?.integridadOrificio" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_4YfHnr5MEfGpf81S66oShw" name="registroDiarioInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_9warE7zDEfGra9j5f3nQKg" type="JAVA_METHOD" expression="setIntegridadOrificio">
+            <operator xmi:type="expression:Operator" xmi:id="_4YfHn75MEfGpf81S66oShw" type="JAVA_METHOD" expression="setIntegridadOrificio">
               <inputTypes>java.lang.String</inputTypes>
             </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_hPe-UL3NEfGtKM1b_VjOvA">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_hPe-Ub3NEfGtKM1b_VjOvA" name="registroDiario" content="registroDiario" type="TYPE_VARIABLE" returnType="com.company.model.RegistroDiario">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_hPe-Ur3NEfGtKM1b_VjOvA" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_hPe-U73NEfGtKM1b_VjOvA" name="registroDiarioInput.fechaRegistro" content="registroDiarioInput?.fechaRegistro" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_hPflYL3NEfGtKM1b_VjOvA" name="registroDiarioInput" type="COMPLEX" createMode="false"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_hPflYb3NEfGtKM1b_VjOvA" type="JAVA_METHOD" expression="setFechaRegistro">
-              <inputTypes>java.time.LocalDate</inputTypes>
-            </operator>
-          </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_hPflYr3NEfGtKM1b_VjOvA">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_hPflY73NEfGtKM1b_VjOvA" name="registroDiario" content="registroDiario" type="TYPE_VARIABLE" returnType="com.company.model.RegistroDiario">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_hPflZL3NEfGtKM1b_VjOvA" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_hPflZb3NEfGtKM1b_VjOvA" name="registroDiarioInput.peso" content="registroDiarioInput?.peso" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Double">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_hPflZr3NEfGtKM1b_VjOvA" name="registroDiarioInput" type="COMPLEX" createMode="false"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_hPflZ73NEfGtKM1b_VjOvA" type="JAVA_METHOD" expression="setPeso">
-              <inputTypes>java.lang.Double</inputTypes>
-            </operator>
-          </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_hPflaL3NEfGtKM1b_VjOvA">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_hPflab3NEfGtKM1b_VjOvA" name="registroDiario" content="registroDiario" type="TYPE_VARIABLE" returnType="com.company.model.RegistroDiario">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_hPflar3NEfGtKM1b_VjOvA" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_hPfla73NEfGtKM1b_VjOvA" name="registroDiarioInput.tensionArterial" content="registroDiarioInput?.tensionArterial" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_hPflbL3NEfGtKM1b_VjOvA" name="registroDiarioInput" type="COMPLEX" createMode="false"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_hPflbb3NEfGtKM1b_VjOvA" type="JAVA_METHOD" expression="setTensionArterial">
-              <inputTypes>java.lang.String</inputTypes>
-            </operator>
-          </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_hPflbr3NEfGtKM1b_VjOvA">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_hPflb73NEfGtKM1b_VjOvA" name="registroDiario" content="registroDiario" type="TYPE_VARIABLE" returnType="com.company.model.RegistroDiario">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_hPflcL3NEfGtKM1b_VjOvA" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_hPflcb3NEfGtKM1b_VjOvA" name="registroDiarioInput.ultraFiltracion" content="registroDiarioInput?.ultraFiltracion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_hPflcr3NEfGtKM1b_VjOvA" name="registroDiarioInput" type="COMPLEX" createMode="false"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_hPflc73NEfGtKM1b_VjOvA" type="JAVA_METHOD" expression="setUltraFiltracion">
-              <inputTypes>java.lang.Integer</inputTypes>
-            </operator>
-          </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_hPfldL3NEfGtKM1b_VjOvA">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_hPfldb3NEfGtKM1b_VjOvA" name="registroDiario" content="registroDiario" type="TYPE_VARIABLE" returnType="com.company.model.RegistroDiario">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_hPfldr3NEfGtKM1b_VjOvA" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_hPfld73NEfGtKM1b_VjOvA" name="registroDiarioInput.aspectoLiquido" content="registroDiarioInput?.aspectoLiquido" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_hPfleL3NEfGtKM1b_VjOvA" name="registroDiarioInput" type="COMPLEX" createMode="false"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_hPfleb3NEfGtKM1b_VjOvA" type="JAVA_METHOD" expression="setAspectoLiquido">
-              <inputTypes>java.lang.String</inputTypes>
-            </operator>
-          </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_hPfler3NEfGtKM1b_VjOvA">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_hPfle73NEfGtKM1b_VjOvA" name="registroDiario" content="registroDiario" type="TYPE_VARIABLE" returnType="com.company.model.RegistroDiario">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_hPflfL3NEfGtKM1b_VjOvA" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_hPflfb3NEfGtKM1b_VjOvA" name="registroDiarioInput.integridadOrificio" content="registroDiarioInput?.integridadOrificio" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_hPflfr3NEfGtKM1b_VjOvA" name="registroDiarioInput" type="COMPLEX" createMode="false"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_hPflf73NEfGtKM1b_VjOvA" type="JAVA_METHOD" expression="setIntegridadOrificio">
-              <inputTypes>java.lang.String</inputTypes>
-            </operator>
-          </operations>
-          <loopCondition xmi:type="expression:Expression" xmi:id="_KM_Po7v3EfG8mPXYfZvL2Q" name="loopWhile()" content="true" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-          <loopMaximum xmi:type="expression:Expression" xmi:id="_KM_PpLv3EfG8mPXYfZvL2Q" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_KM_Po7v3EfG8mPXYfZvL2Q" name="parada" content="loopCounter &lt; 3" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+            <referencedElements xmi:type="expression:Expression" xmi:id="_UHB0gL40EfGtKM1b_VjOvA" name="loopCounter" content="loopCounter" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Integer"/>
+          </loopCondition>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_KM_PpLv3EfG8mPXYfZvL2Q" name="3" content="3" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_KM_Ppbv3EfG8mPXYfZvL2Q" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_KM_Pp7v3EfG8mPXYfZvL2Q" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_KM_Pprv3EfG8mPXYfZvL2Q" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_rD4NKrv3EfG8mPXYfZvL2Q">
-            <targetForm xmi:type="expression:Expression" xmi:id="_lXWLkL3NEfGtKM1b_VjOvA" name="registro" content="2e844953-b388-4175-b4f6-34ab79280c1f" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_8ecpkL5HEfGpf81S66oShw" name="newForm3" content="824a6d1c-9f7a-44a4-b393-b065fbd8519e" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_rD4NKbv3EfG8mPXYfZvL2Q">
-            <inputs xmi:type="process:ContractInput" xmi:id="_hPdJIL3NEfGtKM1b_VjOvA" name="registroDiarioInput" type="COMPLEX" dataReference="registroDiario" createMode="false">
-              <inputs xmi:type="process:ContractInput" xmi:id="_hPdJIb3NEfGtKM1b_VjOvA" name="fechaRegistro" type="LOCALDATE" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_hPdJIr3NEfGtKM1b_VjOvA" name="peso" type="DECIMAL" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_hPdJI73NEfGtKM1b_VjOvA" name="tensionArterial" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_hPdJJL3NEfGtKM1b_VjOvA" name="ultraFiltracion" type="INTEGER" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_hPdJJb3NEfGtKM1b_VjOvA" name="aspectoLiquido" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_hPdJJr3NEfGtKM1b_VjOvA" name="integridadOrificio" createMode="false"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_4YegcL5MEfGpf81S66oShw" name="registroDiarioInput" type="COMPLEX" dataReference="registroDiario" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_4YfHgL5MEfGpf81S66oShw" name="fechaRegistro" type="LOCALDATE" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_4YfHgb5MEfGpf81S66oShw" name="peso" type="INTEGER" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_4YfHgr5MEfGpf81S66oShw" name="tensionArterial" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_4YfHg75MEfGpf81S66oShw" name="integridadOrificio" createMode="false"/>
             </inputs>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_hPeXQL3NEfGtKM1b_VjOvA" expression="registroDiarioInput?.fechaRegistro != null" errorMessage="fechaRegistro is mandatory for RegistroDiario" name="mandatory_registroDiarioInput_fechaRegistro">
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_4YfHhL5MEfGpf81S66oShw" expression="registroDiarioInput?.fechaRegistro != null" errorMessage="fechaRegistro is mandatory for RegistroDiario" name="mandatory_registroDiarioInput_fechaRegistro">
               <inputNames>registroDiarioInput</inputNames>
             </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_hPeXQb3NEfGtKM1b_VjOvA" expression="registroDiarioInput?.peso != null" errorMessage="peso is mandatory for RegistroDiario" name="mandatory_registroDiarioInput_peso">
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_4YfHhb5MEfGpf81S66oShw" expression="registroDiarioInput?.peso != null" errorMessage="peso is mandatory for RegistroDiario" name="mandatory_registroDiarioInput_peso">
               <inputNames>registroDiarioInput</inputNames>
             </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_hPeXQr3NEfGtKM1b_VjOvA" expression="registroDiarioInput?.tensionArterial != null" errorMessage="tensionArterial is mandatory for RegistroDiario" name="mandatory_registroDiarioInput_tensionArterial">
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_4YfHhr5MEfGpf81S66oShw" expression="registroDiarioInput?.tensionArterial != null" errorMessage="tensionArterial is mandatory for RegistroDiario" name="mandatory_registroDiarioInput_tensionArterial">
               <inputNames>registroDiarioInput</inputNames>
             </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_hPeXQ73NEfGtKM1b_VjOvA" expression="registroDiarioInput?.ultraFiltracion != null" errorMessage="ultraFiltracion is mandatory for RegistroDiario" name="mandatory_registroDiarioInput_ultraFiltracion">
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_4YfHh75MEfGpf81S66oShw" expression="registroDiarioInput?.integridadOrificio != null" errorMessage="integridadOrificio is mandatory for RegistroDiario" name="mandatory_registroDiarioInput_integridadOrificio">
               <inputNames>registroDiarioInput</inputNames>
             </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_hPeXRL3NEfGtKM1b_VjOvA" expression="registroDiarioInput?.aspectoLiquido != null" errorMessage="aspectoLiquido is mandatory for RegistroDiario" name="mandatory_registroDiarioInput_aspectoLiquido">
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_5EbngL5MEfGpf81S66oShw" expression="registroDiarioInput.tensionArterial ==~ /\d{2,3}\/\d{2,3}/;" name="tension">
               <inputNames>registroDiarioInput</inputNames>
             </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_hPeXRb3NEfGtKM1b_VjOvA" expression="registroDiarioInput?.integridadOrificio != null" errorMessage="integridadOrificio is mandatory for RegistroDiario" name="mandatory_registroDiarioInput_integridadOrificio">
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_63oqgL5MEfGpf81S66oShw" expression="registroDiarioInput.peso > 0;" name="peso">
               <inputNames>registroDiarioInput</inputNames>
             </constraints>
           </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_rD4NLLv3EfG8mPXYfZvL2Q" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:Task" xmi:id="_A7j4oL5JEfGpf81S66oShw" name="Registrar líquido intercambiado y su aspecto" outgoing="_zGnnQL42EfGtKM1b_VjOvA" incoming="_7IlUwL5FEfGpf81S66oShw" type="STANDARD" overrideActorsOfTheLane="false">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_hHAnEb42EfGtKM1b_VjOvA" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_hHAnEL42EfGtKM1b_VjOvA" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_hHAnEr42EfGtKM1b_VjOvA" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_KDScs75KEfGpf81S66oShw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_KDSctL5KEfGpf81S66oShw" name="registroDiario" content="registroDiario" type="TYPE_VARIABLE" returnType="com.company.model.RegistroDiario">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_KDSctb5KEfGpf81S66oShw" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_KDSctr5KEfGpf81S66oShw" name="registroDiarioInput.horaRegistro" content="registroDiarioInput?.horaRegistro" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDateTime">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_KDSct75KEfGpf81S66oShw" name="registroDiarioInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_KDScuL5KEfGpf81S66oShw" type="JAVA_METHOD" expression="setHoraRegistro">
+              <inputTypes>java.time.LocalDateTime</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_KDScub5KEfGpf81S66oShw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_KDScur5KEfGpf81S66oShw" name="registroDiario" content="registroDiario" type="TYPE_VARIABLE" returnType="com.company.model.RegistroDiario">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_KDScu75KEfGpf81S66oShw" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_KDScvL5KEfGpf81S66oShw" name="registroDiarioInput.ultraFiltracion" content="registroDiarioInput?.ultraFiltracion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_KDScvb5KEfGpf81S66oShw" name="registroDiarioInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_KDScvr5KEfGpf81S66oShw" type="JAVA_METHOD" expression="setUltraFiltracion">
+              <inputTypes>java.lang.Integer</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_KDScv75KEfGpf81S66oShw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_KDScwL5KEfGpf81S66oShw" name="registroDiario" content="registroDiario" type="TYPE_VARIABLE" returnType="com.company.model.RegistroDiario">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_KDScwb5KEfGpf81S66oShw" name="registroDiario" dataType="_jKQjfbvoEfGmLL8pINuU7A" className="com.company.model.RegistroDiario"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_KDScwr5KEfGpf81S66oShw" name="registroDiarioInput.aspectoLiquido" content="registroDiarioInput?.aspectoLiquido" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_KDScw75KEfGpf81S66oShw" name="registroDiarioInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_KDScxL5KEfGpf81S66oShw" type="JAVA_METHOD" expression="setAspectoLiquido">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_hHAnE742EfGtKM1b_VjOvA" name="loopWhile()" content="loopCounter &lt; 3;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+            <referencedElements xmi:type="expression:Expression" xmi:id="_caBcEL5NEfGpf81S66oShw" name="loopCounter" content="loopCounter" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Integer"/>
+          </loopCondition>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_hHAnFL42EfGtKM1b_VjOvA" name="3" content="3" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_hHAnFb42EfGtKM1b_VjOvA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_hHAnF742EfGtKM1b_VjOvA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_hHAnFr42EfGtKM1b_VjOvA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <formMapping xmi:type="process:FormMapping" xmi:id="_A7kfub5JEfGpf81S66oShw">
+            <targetForm xmi:type="expression:Expression" xmi:id="_SpkWAL5KEfGpf81S66oShw" name="newForm4" content="f5961b38-124b-4093-9894-186f9ac78c58" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+          </formMapping>
+          <contract xmi:type="process:Contract" xmi:id="_A7kfuL5JEfGpf81S66oShw">
+            <inputs xmi:type="process:ContractInput" xmi:id="_KDR1oL5KEfGpf81S66oShw" name="registroDiarioInput" type="COMPLEX" dataReference="registroDiario" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_KDR1ob5KEfGpf81S66oShw" name="horaRegistro" type="LOCALDATETIME" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_KDR1or5KEfGpf81S66oShw" name="ultraFiltracion" type="INTEGER" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_KDR1o75KEfGpf81S66oShw" name="aspectoLiquido" createMode="false"/>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_KDScsL5KEfGpf81S66oShw" expression="registroDiarioInput?.horaRegistro != null" errorMessage="horaRegistro is mandatory for RegistroDiario" name="mandatory_registroDiarioInput_horaRegistro">
+              <inputNames>registroDiarioInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_KDScsb5KEfGpf81S66oShw" expression="registroDiarioInput?.ultraFiltracion != null" errorMessage="ultraFiltracion is mandatory for RegistroDiario" name="mandatory_registroDiarioInput_ultraFiltracion">
+              <inputNames>registroDiarioInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_KDScsr5KEfGpf81S66oShw" expression="registroDiarioInput?.aspectoLiquido != null" errorMessage="aspectoLiquido is mandatory for RegistroDiario" name="mandatory_registroDiarioInput_aspectoLiquido">
+              <inputNames>registroDiarioInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_L7iXwL5KEfGpf81S66oShw" expression="registroDiarioInput.ultraFiltracion > 0;" name="líquido">
+              <inputNames>registroDiarioInput</inputNames>
+            </constraints>
+          </contract>
+          <expectedDuration xmi:type="expression:Expression" xmi:id="_A7kfu75JEfGpf81S66oShw" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
       </elements>
       <elements xmi:type="process:Lane" xmi:id="_gXCbgLvtEfG8mPXYfZvL2Q" name="Enfermería Nefrológica" actor="_lfWjoLyyEfGra9j5f3nQKg">
@@ -291,7 +271,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_h7d3KLv3EfG8mPXYfZvL2Q" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_h7d3J7v3EfG8mPXYfZvL2Q" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_qfvwwL11EfGtKM1b_VjOvA" name="Revisar registro diario del paciente" outgoing="_vqohQL11EfGtKM1b_VjOvA" incoming="_p2Z40L11EfGtKM1b_VjOvA" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_qfvwwL11EfGtKM1b_VjOvA" name="Revisar registro diario del paciente" outgoing="_vqohQL11EfGtKM1b_VjOvA" incoming="_zGnnQL42EfGtKM1b_VjOvA" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_p2YDob11EfGtKM1b_VjOvA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_p2YDoL11EfGtKM1b_VjOvA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_p2YDor11EfGtKM1b_VjOvA" name="" content="" returnTypeFixed="true"/>
@@ -338,7 +318,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_L0t_RbvzEfGmLL8pINuU7A" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_L0t_RLvzEfGmLL8pINuU7A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_L0t_R7vzEfGmLL8pINuU7A">
-            <targetForm xmi:type="expression:Expression" xmi:id="_mIopIb3OEfGtKM1b_VjOvA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_21IMcb5OEfGmwNutk-CgvQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_L0t_RrvzEfGmLL8pINuU7A"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_L0t_SbvzEfGmLL8pINuU7A" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -353,7 +333,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_dAo4t7vzEfGmLL8pINuU7A" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_dAo4trvzEfGmLL8pINuU7A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_dAo4ubvzEfGmLL8pINuU7A">
-            <targetForm xmi:type="expression:Expression" xmi:id="_mIopIr3OEfGtKM1b_VjOvA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_21IMcr5OEfGmwNutk-CgvQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_dAo4uLvzEfGmLL8pINuU7A"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_dAo4u7vzEfGmLL8pINuU7A" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -379,7 +359,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_5E8Q97vzEfGmLL8pINuU7A" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_5E8Q9rvzEfGmLL8pINuU7A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_5E8Q-bvzEfGmLL8pINuU7A">
-            <targetForm xmi:type="expression:Expression" xmi:id="_mIopI73OEfGtKM1b_VjOvA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_21IMc75OEfGmwNutk-CgvQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_5E8Q-LvzEfGmLL8pINuU7A"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_5E8Q-7vzEfGmLL8pINuU7A" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -404,7 +384,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_Ubsmt7v0EfGmLL8pINuU7A" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_Ubsmtrv0EfGmLL8pINuU7A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_Ubsmubv0EfGmLL8pINuU7A">
-            <targetForm xmi:type="expression:Expression" xmi:id="_mIopJL3OEfGtKM1b_VjOvA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_21IMdL5OEfGmwNutk-CgvQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_UbsmuLv0EfGmLL8pINuU7A"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_Ubsmu7v0EfGmLL8pINuU7A" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -424,7 +404,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_ouVZd7v0EfGmLL8pINuU7A" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_ouVZdrv0EfGmLL8pINuU7A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_ouVZebv0EfGmLL8pINuU7A">
-            <targetForm xmi:type="expression:Expression" xmi:id="_mIopJb3OEfGtKM1b_VjOvA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_21IMdb5OEfGmwNutk-CgvQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_ouVZeLv0EfGmLL8pINuU7A"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_ouVZe7v0EfGmLL8pINuU7A" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -439,7 +419,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_sGx7-Lv0EfGmLL8pINuU7A" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_sGx797v0EfGmLL8pINuU7A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_sGx7-rv0EfGmLL8pINuU7A">
-            <targetForm xmi:type="expression:Expression" xmi:id="_mIopJr3OEfGtKM1b_VjOvA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_21IMdr5OEfGmwNutk-CgvQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_sGx7-bv0EfGmLL8pINuU7A"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_sGx7_Lv0EfGmLL8pINuU7A" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -452,7 +432,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_cSZOYby-EfGra9j5f3nQKg" content="" returnType="java.lang.Boolean"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_jKQjXbvoEfGmLL8pINuU7A">
-        <targetForm xmi:type="expression:Expression" xmi:id="_mIopJ73OEfGtKM1b_VjOvA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_21IMd75OEfGmwNutk-CgvQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_jKQjX7voEfGmLL8pINuU7A">
         <targetForm xmi:type="expression:Expression" xmi:id="_jKQjYLvoEfGmLL8pINuU7A" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -535,13 +515,17 @@
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_lxO84bv5EfGmLL8pINuU7A"/>
         <condition xmi:type="expression:Expression" xmi:id="_lxO84rv5EfGmLL8pINuU7A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_p2Z40L11EfGtKM1b_VjOvA" target="_qfvwwL11EfGtKM1b_VjOvA" source="_rD4NILv3EfG8mPXYfZvL2Q">
-        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_p2Z40b11EfGtKM1b_VjOvA"/>
-        <condition xmi:type="expression:Expression" xmi:id="_p2Z40r11EfGtKM1b_VjOvA" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-      </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_vqohQL11EfGtKM1b_VjOvA" target="_bwqhwLv3EfG8mPXYfZvL2Q" source="_qfvwwL11EfGtKM1b_VjOvA">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_vqpIUL11EfGtKM1b_VjOvA"/>
         <condition xmi:type="expression:Expression" xmi:id="_vqpIUb11EfGtKM1b_VjOvA" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_zGnnQL42EfGtKM1b_VjOvA" target="_qfvwwL11EfGtKM1b_VjOvA" source="_A7j4oL5JEfGpf81S66oShw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_zGo1YL42EfGtKM1b_VjOvA"/>
+        <condition xmi:type="expression:Expression" xmi:id="_zGo1Yb42EfGtKM1b_VjOvA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_7IlUwL5FEfGpf81S66oShw" target="_A7j4oL5JEfGpf81S66oShw" source="_rD4NILv3EfG8mPXYfZvL2Q">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_7IpmML5FEfGpf81S66oShw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_7IpmMb5FEfGpf81S66oShw" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_jKQjZLvoEfGmLL8pINuU7A" name="Paciente / Cuidador Familiar"/>
       <actors xmi:type="process:Actor" xmi:id="_lfWjoLyyEfGra9j5f3nQKg" name="Enfermero Nefrológico"/>
@@ -597,7 +581,11 @@
             </children>
             <children xmi:type="notation:Shape" xmi:id="_rD5bQLv3EfG8mPXYfZvL2Q" type="3005" element="_rD4NILv3EfG8mPXYfZvL2Q" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
               <children xmi:type="notation:DecorationNode" xmi:id="_rD5bQrv3EfG8mPXYfZvL2Q" type="5005"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rD5bQbv3EfG8mPXYfZvL2Q" x="897" y="79" width="268" height="132"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rD5bQbv3EfG8mPXYfZvL2Q" x="764" y="79" width="268" height="132"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_A7kfvL5JEfGpf81S66oShw" type="3005" element="_A7j4oL5JEfGpf81S66oShw" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_A7kfvr5JEfGpf81S66oShw" type="5005"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A7kfvb5JEfGpf81S66oShw" x="1163" y="93" width="206" height="103"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_jKQjjLvoEfGmLL8pINuU7A"/>
@@ -869,13 +857,6 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lxPj8rv5EfGmLL8pINuU7A" points="[0, -1, 2134, 751]$[27, -1, 2161, 751]$[27, -868, 2161, -116]$[-2101, -868, 33, -116]$[-2101, -757, 33, -5]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lxSAMLv5EfGmLL8pINuU7A" id="(1.0,0.5166666666666667)"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_p2Z40711EfGtKM1b_VjOvA" type="4001" element="_p2Z40L11EfGtKM1b_VjOvA" source="_rD5bQLv3EfG8mPXYfZvL2Q" target="_qfw-4L11EfGtKM1b_VjOvA" roundedBendpointsRadius="10" routing="Rectilinear">
-      <children xmi:type="notation:DecorationNode" xmi:id="_p2Z41r11EfGtKM1b_VjOvA" type="6001">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_p2Z41711EfGtKM1b_VjOvA" y="-10"/>
-      </children>
-      <styles xmi:type="notation:FontStyle" xmi:id="_p2Z41L11EfGtKM1b_VjOvA" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_p2Z41b11EfGtKM1b_VjOvA" points="[134, 0, -131, -271]$[246, 0, -19, -271]$[246, 224, -19, -47]"/>
-    </edges>
     <edges xmi:type="notation:Connector" xmi:id="_vqqWcL11EfGtKM1b_VjOvA" type="4001" element="_vqohQL11EfGtKM1b_VjOvA" source="_qfw-4L11EfGtKM1b_VjOvA" target="_bwrI0Lv3EfG8mPXYfZvL2Q" roundedBendpointsRadius="10" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_vqqWc711EfGtKM1b_VjOvA" type="6001">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_vqqWdL11EfGtKM1b_VjOvA" y="-10"/>
@@ -884,6 +865,24 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vqqWcr11EfGtKM1b_VjOvA" points="[0, 15, -105, -1]$[100, 15, -5, -1]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vqsysL11EfGtKM1b_VjOvA" id="(1.0,0.3157894736842105)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vqsysb11EfGtKM1b_VjOvA" id="(0.13953488372093023,0.5581395348837209)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_zGpccL42EfGtKM1b_VjOvA" type="4001" element="_zGnnQL42EfGtKM1b_VjOvA" source="_A7kfvL5JEfGpf81S66oShw" target="_qfw-4L11EfGtKM1b_VjOvA" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_zGqqkL42EfGtKM1b_VjOvA" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_zGqqkb42EfGtKM1b_VjOvA" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_zGpccb42EfGtKM1b_VjOvA" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zGpccr42EfGtKM1b_VjOvA" points="[-87, 79, 11, -185]$[-87, 157, 11, -107]$[-94, 157, 4, -107]$[-94, 252, 4, -12]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zGr4sL42EfGtKM1b_VjOvA" id="(1.0,0.23300970873786409)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zGr4sb42EfGtKM1b_VjOvA" id="(0.4421052631578947,0.12631578947368421)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_7ItQkL5FEfGpf81S66oShw" type="4001" element="_7IlUwL5FEfGpf81S66oShw" source="_rD5bQLv3EfG8mPXYfZvL2Q" target="_A7kfvL5JEfGpf81S66oShw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_7It3oL5FEfGpf81S66oShw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7It3ob5FEfGpf81S66oShw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_7ItQkb5FEfGpf81S66oShw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7ItQkr5FEfGpf81S66oShw" points="[0, 39, -134, -1]$[131, 39, -3, -1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7IwT4L5FEfGpf81S66oShw" id="(1.0,0.1893939393939394)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7IwT4b5FEfGpf81S66oShw" id="(0.014563106796116505,0.49514563106796117)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>

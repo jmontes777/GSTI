@@ -1,10 +1,10 @@
 {
-  "id" : "registro",
-  "name" : "registro",
+  "id" : "horaintercambio",
+  "name" : "horaintercambio",
   "type" : "form",
-  "uuid" : "2e844953-b388-4175-b4f6-34ab79280c1f",
+  "uuid" : "49f4d055-e579-493f-8333-29eadbbb0e9a",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1790934919717,
+  "lastUpdate" : 1790928275032,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -14,7 +14,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "809d4e3b-ba70-4d24-a0ab-ea2d3b63f2c7",
+        "reference" : "c84fdf1e-7027-4cd3-a0cd-493233a5af8b",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -53,7 +53,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "0edd3ff6-d99e-4cf7-9b21-dd4966218996",
+              "reference" : "c0c0da49-81f8-4478-b22d-ed65ac62094b",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -101,7 +101,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "dc065e98-589b-4172-bdc5-d7eb0a2c26c9",
+              "reference" : "5ef3c73d-af29-4f18-92fc-512861ef3ca5",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -117,7 +117,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "256bae9f-98d6-4089-b349-b6476740c9fa",
+        "reference" : "527ce697-f349-4227-aa19-b3cc0e8e29db",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -126,7 +126,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "b0fee446-454c-4bea-8480-11867a526edb",
+          "reference" : "d39d03cc-c36c-444d-9f80-0c0f54965f8a",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -165,7 +165,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "7b4206cb-fb0b-4047-b75a-9a91ccc7be4a",
+                "reference" : "1dcbb1d5-812c-4de6-8ea1-de0b4205a69c",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -182,7 +182,8 @@
                 },
                 "propertyValues" : {
                   "repeatedCollection" : {
-                    "type" : "variable"
+                    "type" : "variable",
+                    "value" : "registroDiario"
                   },
                   "hidden" : {
                     "type" : "constant",
@@ -197,7 +198,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "f992dd75-1014-4738-a033-14f53a8a9b8a",
+                "reference" : "67781ae1-c1ba-4b22-aa4b-80034c3d763f",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -211,9 +212,164 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
+                        "allowHtml" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!$item.fechaRegistro"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Fecha Registro"
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{$item.fechaRegistro|uiDate}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        }
+                      },
+                      "reference" : "27dbf285-288d-4cd9-bfd8-971546c0a6d6",
+                      "hasValidationError" : false,
+                      "id" : "pbText",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "allowHtml" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!$item.peso"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Peso"
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{$item.peso}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        }
+                      },
+                      "reference" : "1493a347-32c4-41fc-9316-21a70232cca5",
+                      "hasValidationError" : false,
+                      "id" : "pbText",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "allowHtml" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!$item.tensionArterial"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Tension Arterial"
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{$item.tensionArterial}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        }
+                      },
+                      "reference" : "95e34d92-7191-411d-bc20-00bbecefeb4f",
+                      "hasValidationError" : false,
+                      "id" : "pbText",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "showNow" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
                         "hidden" : {
                           "type" : "constant",
                           "value" : false
+                        },
+                        "inlineInput" : {
+                          "type" : "constant",
+                          "value" : true
                         },
                         "dateFormat" : {
                           "type" : "constant",
@@ -233,7 +389,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Fecha Registro"
+                          "value" : "Hora Registro"
                         },
                         "type" : {
                           "type" : "constant"
@@ -245,6 +401,10 @@
                         "todayLabel" : {
                           "type" : "constant",
                           "value" : "Today"
+                        },
+                        "timePlaceholder" : {
+                          "type" : "constant",
+                          "value" : "Enter a time (h:mm:ss a)"
                         },
                         "labelHidden" : {
                           "type" : "constant",
@@ -258,9 +418,17 @@
                           "type" : "constant",
                           "value" : "top"
                         },
+                        "timeFormat" : {
+                          "type" : "constant",
+                          "value" : "h:mm:ss a"
+                        },
                         "placeholder" : {
                           "type" : "constant",
                           "value" : "Enter a date (mm/dd/yyyy)"
+                        },
+                        "nowLabel" : {
+                          "type" : "constant",
+                          "value" : "Now"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -268,12 +436,16 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "registroDiario.fechaRegistro"
+                          "value" : "$item.horaRegistro"
+                        },
+                        "withTimeZone" : {
+                          "type" : "constant",
+                          "value" : false
                         }
                       },
-                      "reference" : "c4f04730-5151-4c85-9fd1-44e3661cafb0",
+                      "reference" : "e1c359d0-dcdc-4bc1-88f1-37e40aee4ddf",
                       "hasValidationError" : false,
-                      "id" : "pbDatePicker",
+                      "id" : "pbDateTimePicker",
                       "description" : ""
                     }
                   ],
@@ -313,7 +485,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Peso"
+                          "value" : "Ultra Filtracion"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -328,40 +500,14 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "registroDiario.peso"
+                          "value" : "$item.ultraFiltracion"
                         },
                         "required" : {
                           "type" : "constant",
                           "value" : true
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "minLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "maxLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "debounce" : {
-                          "type" : "constant",
-                          "value" : 0
-                        },
-                        "min" : {
-                          "type" : "constant"
-                        },
-                        "max" : {
-                          "type" : "constant"
-                        },
-                        "step" : {
-                          "type" : "constant",
-                          "value" : 1
                         }
                       },
-                      "reference" : "eeafdcb0-5985-4ef3-8bf8-c875ec9e4574",
+                      "reference" : "e0aadb58-71db-45c7-82ee-aa797cc02f53",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -403,7 +549,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Tension Arterial"
+                          "value" : "Aspecto Liquido"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -418,40 +564,14 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "registroDiario.tensionArterial"
+                          "value" : "$item.aspectoLiquido"
                         },
                         "required" : {
                           "type" : "constant",
                           "value" : true
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "minLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "maxLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "debounce" : {
-                          "type" : "constant",
-                          "value" : 0
-                        },
-                        "min" : {
-                          "type" : "constant"
-                        },
-                        "max" : {
-                          "type" : "constant"
-                        },
-                        "step" : {
-                          "type" : "constant",
-                          "value" : 1
                         }
                       },
-                      "reference" : "4d96b72b-9cf1-4f1b-96e3-ac65a8cb1325",
+                      "reference" : "e2f23e93-158b-49e6-8f3b-9c1fc6431f22",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -467,57 +587,42 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
+                        "allowHtml" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
                         "labelHidden" : {
                           "type" : "constant",
                           "value" : false
                         },
                         "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
+                          "type" : "expression",
+                          "value" : "!$item.integridadOrificio"
                         },
                         "cssClasses" : {
                           "type" : "constant",
                           "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : false
                         },
                         "label" : {
                           "type" : "interpolation",
                           "value" : "Integridad Orificio"
                         },
-                        "placeholder" : {
-                          "type" : "constant"
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{$item.integridadOrificio}}"
                         },
-                        "type" : {
+                        "alignment" : {
                           "type" : "constant",
-                          "value" : "text"
+                          "value" : "left"
                         },
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "registroDiario.integridadOrificio"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : true
                         }
                       },
-                      "reference" : "50f54b3f-bd1b-4b68-a371-2167989ceb06",
+                      "reference" : "d3612788-6d19-41fd-b0d8-079b0a5a7831",
                       "hasValidationError" : false,
-                      "id" : "pbInput",
+                      "id" : "pbText",
                       "description" : ""
                     }
                   ],
@@ -537,7 +642,7 @@
                         },
                         "hidden" : {
                           "type" : "expression",
-                          "value" : "!registroDiario.alertaClinica"
+                          "value" : "!$item.alertaClinica"
                         },
                         "cssClasses" : {
                           "type" : "constant",
@@ -557,12 +662,90 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "registroDiario.alertaClinica"
+                          "value" : "$item.alertaClinica"
                         }
                       },
-                      "reference" : "19433d05-fc65-485b-9920-cd1a681bef14",
+                      "reference" : "0b125a97-d434-4371-a117-3b9d81b9d5c7",
                       "hasValidationError" : false,
                       "id" : "pbCheckbox",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "removeItem" : {
+                          "type" : "variable",
+                          "value" : "$item"
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "buttonStyle" : {
+                          "type" : "constant",
+                          "value" : "danger"
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "<span class=\"glyphicon glyphicon-remove\"></span>"
+                        },
+                        "dataToSend" : {
+                          "type" : "expression"
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "collectionPosition" : {
+                          "type" : "constant",
+                          "value" : "Item"
+                        },
+                        "targetUrlOnSuccess" : {
+                          "type" : "interpolation"
+                        },
+                        "action" : {
+                          "type" : "constant",
+                          "value" : "Remove from collection"
+                        },
+                        "collectionToModify" : {
+                          "type" : "variable",
+                          "value" : "$collection"
+                        },
+                        "valueToAdd" : {
+                          "type" : "expression"
+                        },
+                        "disabled" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "right"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        }
+                      },
+                      "reference" : "b3c956a0-1cec-4b6d-8db9-58985eb70024",
+                      "hasValidationError" : false,
+                      "id" : "pbButton",
                       "description" : ""
                     }
                   ]
@@ -596,11 +779,88 @@
                   },
                   "label" : {
                     "type" : "interpolation",
+                    "value" : "<span class=\"glyphicon glyphicon-plus\"></span> Add RegistroDiario"
+                  },
+                  "dataToSend" : {
+                    "type" : "expression"
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "collectionPosition" : {
+                    "type" : "constant"
+                  },
+                  "targetUrlOnSuccess" : {
+                    "type" : "interpolation"
+                  },
+                  "action" : {
+                    "type" : "constant",
+                    "value" : "Add to collection"
+                  },
+                  "collectionToModify" : {
+                    "type" : "variable",
+                    "value" : "registroDiario"
+                  },
+                  "valueToAdd" : {
+                    "type" : "expression",
+                    "value" : "{\r\n  \"fechaRegistro\" : null,\r\n  \"peso\" : 0,\r\n  \"tensionArterial\" : \"\",\r\n  \"horaRegistro\" : null,\r\n  \"ultraFiltracion\" : 0,\r\n  \"aspectoLiquido\" : \"\",\r\n  \"integridadOrificio\" : \"\",\r\n  \"alertaClinica\" : false\r\n}"
+                  },
+                  "disabled" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  },
+                  "dimension" : {
+                    "type" : "constant",
+                    "value" : 12
+                  }
+                },
+                "reference" : "5c187c19-875e-4dce-8f8d-b9515f3f7c14",
+                "hasValidationError" : false,
+                "id" : "pbButton",
+                "description" : ""
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "md" : 12,
+                  "sm" : 12,
+                  "xs" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "removeItem" : {
+                    "type" : "variable"
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "buttonStyle" : {
+                    "type" : "constant",
+                    "value" : "primary"
+                  },
+                  "label" : {
+                    "type" : "interpolation",
                     "value" : "Submit"
                   },
                   "dataToSend" : {
-                    "type" : "constant",
-                    "value" : "registroDiario"
+                    "type" : "expression",
+                    "value" : "formOutput"
                   },
                   "dataFromError" : {
                     "type" : "variable",
@@ -642,30 +902,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "assign" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "url" : {
-                    "type" : "interpolation"
-                  },
-                  "responseStatusCode" : {
-                    "type" : "variable"
-                  },
-                  "dataFromSuccess" : {
-                    "type" : "variable"
-                  },
-                  "closeOnSuccess" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "modalId" : {
-                    "type" : "constant",
-                    "value" : ""
                   }
                 },
-                "reference" : "07277eaa-2165-44ff-b1aa-2d6902089b89",
+                "reference" : "adb91add-ab77-4efc-a342-7d2cb63a1ee6",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -717,7 +956,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "8e0bad79-e7b1-4922-9c71-e164e71f1404",
+                "reference" : "0d078ce6-1c63-41d1-b784-c4ce471b2144",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -757,14 +996,11 @@
         "if( $data.registroDiario ){",
         "\treturn {",
         "\t\t//map registroDiario variable to expected task contract input",
-        "\t\tregistroDiarioInput: {",
-        "\t\t\tfechaRegistro: $data.registroDiario.fechaRegistro !== undefined ? $data.registroDiario.fechaRegistro : null,",
-        "\t\t\tpeso: $data.registroDiario.peso !== undefined ? $data.registroDiario.peso : null,",
-        "\t\t\ttensionArterial: $data.registroDiario.tensionArterial !== undefined ? $data.registroDiario.tensionArterial : null,",
-        "\t\t\tultraFiltracion: $data.registroDiario.ultraFiltracion !== undefined ? $data.registroDiario.ultraFiltracion : null,",
-        "\t\t\taspectoLiquido: $data.registroDiario.aspectoLiquido !== undefined ? $data.registroDiario.aspectoLiquido : null,",
-        "\t\t\tintegridadOrificio: $data.registroDiario.integridadOrificio !== undefined ? $data.registroDiario.integridadOrificio : null",
-        "\t\t}",
+        "\t\tregistroDiarioInput: $data.registroDiario.map( it => ({",
+        "\t\t\thoraRegistro: it.horaRegistro !== undefined ? it.horaRegistro : null,",
+        "\t\t\tultraFiltracion: it.ultraFiltracion !== undefined ? it.ultraFiltracion : null,",
+        "\t\t\taspectoLiquido: it.aspectoLiquido !== undefined ? it.aspectoLiquido : null",
+        "\t\t}))",
         "\t}",
         "}"
       ],
@@ -794,14 +1030,14 @@
   },
   "assets" : [
     {
-      "id" : "1ef3d11b-5edb-4ed1-9c0b-e9e7867110b6",
+      "id" : "3189728a-42e9-4934-8567-49825621802e",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "eb27026c-6012-4e12-a747-2c4102f7f708",
+      "id" : "c4e4a741-3f3d-474d-99de-77e045a1430d",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,

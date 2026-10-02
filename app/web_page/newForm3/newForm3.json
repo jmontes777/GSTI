@@ -1,10 +1,10 @@
 {
-  "id" : "registro",
-  "name" : "registro",
+  "id" : "newForm3",
+  "name" : "newForm3",
   "type" : "form",
-  "uuid" : "2e844953-b388-4175-b4f6-34ab79280c1f",
+  "uuid" : "824a6d1c-9f7a-44a4-b393-b065fbd8519e",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1790934919717,
+  "lastUpdate" : 1790935163379,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -14,7 +14,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "809d4e3b-ba70-4d24-a0ab-ea2d3b63f2c7",
+        "reference" : "10514fa7-423c-402d-a973-6d878643b946",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -53,7 +53,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "0edd3ff6-d99e-4cf7-9b21-dd4966218996",
+              "reference" : "9848fe1f-c43e-4d9f-ab96-76cb9169a29b",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -101,7 +101,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "dc065e98-589b-4172-bdc5-d7eb0a2c26c9",
+              "reference" : "f655b2b3-979a-4deb-9a7d-c3108b264636",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -117,7 +117,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "256bae9f-98d6-4089-b349-b6476740c9fa",
+        "reference" : "a345867c-1b12-4e00-8767-ab638aaa1950",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -126,7 +126,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "b0fee446-454c-4bea-8480-11867a526edb",
+          "reference" : "2f56af6d-8f0c-4968-b362-d589fa044d13",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -165,7 +165,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "7b4206cb-fb0b-4047-b75a-9a91ccc7be4a",
+                "reference" : "f92639f8-5bf9-48cf-9555-281f8a9a37c4",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -197,7 +197,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "f992dd75-1014-4738-a033-14f53a8a9b8a",
+                "reference" : "00052437-94b9-4b48-b354-27bfd6385285",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -271,7 +271,7 @@
                           "value" : "registroDiario.fechaRegistro"
                         }
                       },
-                      "reference" : "c4f04730-5151-4c85-9fd1-44e3661cafb0",
+                      "reference" : "fbb68e4e-31f3-43b9-b480-9cd48c457e39",
                       "hasValidationError" : false,
                       "id" : "pbDatePicker",
                       "description" : ""
@@ -333,35 +333,9 @@
                         "required" : {
                           "type" : "constant",
                           "value" : true
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "minLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "maxLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "debounce" : {
-                          "type" : "constant",
-                          "value" : 0
-                        },
-                        "min" : {
-                          "type" : "constant"
-                        },
-                        "max" : {
-                          "type" : "constant"
-                        },
-                        "step" : {
-                          "type" : "constant",
-                          "value" : 1
                         }
                       },
-                      "reference" : "eeafdcb0-5985-4ef3-8bf8-c875ec9e4574",
+                      "reference" : "67aef226-9621-4ee0-94e8-1a6d23a97882",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -423,37 +397,158 @@
                         "required" : {
                           "type" : "constant",
                           "value" : true
+                        }
+                      },
+                      "reference" : "49383580-09ef-4366-a1ba-c7456e368e4a",
+                      "hasValidationError" : false,
+                      "id" : "pbInput",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "allowHtml" : {
+                          "type" : "constant",
+                          "value" : true
                         },
-                        "allowHTML" : {
+                        "labelHidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "minLength" : {
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!registroDiario.horaRegistro"
+                        },
+                        "cssClasses" : {
                           "type" : "constant",
                           "value" : ""
                         },
-                        "maxLength" : {
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Hora Registro"
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{registroDiario.horaRegistro|uiDate}}"
+                        },
+                        "alignment" : {
                           "type" : "constant",
-                          "value" : ""
+                          "value" : "left"
                         },
-                        "debounce" : {
+                        "dimension" : {
                           "type" : "constant",
-                          "value" : 0
-                        },
-                        "min" : {
-                          "type" : "constant"
-                        },
-                        "max" : {
-                          "type" : "constant"
-                        },
-                        "step" : {
-                          "type" : "constant",
-                          "value" : 1
+                          "value" : 12
                         }
                       },
-                      "reference" : "4d96b72b-9cf1-4f1b-96e3-ac65a8cb1325",
+                      "reference" : "7606aca6-b729-4867-81c9-b191109bd4df",
                       "hasValidationError" : false,
-                      "id" : "pbInput",
+                      "id" : "pbText",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "allowHtml" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!registroDiario.ultraFiltracion"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Ultra Filtracion"
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{registroDiario.ultraFiltracion}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        }
+                      },
+                      "reference" : "07a7217a-175c-4b1f-9e06-4735e27fd2f8",
+                      "hasValidationError" : false,
+                      "id" : "pbText",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "allowHtml" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!registroDiario.aspectoLiquido"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Aspecto Liquido"
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{registroDiario.aspectoLiquido}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        }
+                      },
+                      "reference" : "e630b51d-a3fc-4257-a6e6-8e7288a2afbb",
+                      "hasValidationError" : false,
+                      "id" : "pbText",
                       "description" : ""
                     }
                   ],
@@ -515,7 +610,7 @@
                           "value" : true
                         }
                       },
-                      "reference" : "50f54b3f-bd1b-4b68-a371-2167989ceb06",
+                      "reference" : "4f0ddef4-835a-4bdf-9d2c-b558dd26272e",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -560,7 +655,7 @@
                           "value" : "registroDiario.alertaClinica"
                         }
                       },
-                      "reference" : "19433d05-fc65-485b-9920-cd1a681bef14",
+                      "reference" : "e55a7220-9351-4a37-8c0c-2242b04385c4",
                       "hasValidationError" : false,
                       "id" : "pbCheckbox",
                       "description" : ""
@@ -599,8 +694,8 @@
                     "value" : "Submit"
                   },
                   "dataToSend" : {
-                    "type" : "constant",
-                    "value" : "registroDiario"
+                    "type" : "expression",
+                    "value" : "formOutput"
                   },
                   "dataFromError" : {
                     "type" : "variable",
@@ -642,30 +737,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "assign" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "url" : {
-                    "type" : "interpolation"
-                  },
-                  "responseStatusCode" : {
-                    "type" : "variable"
-                  },
-                  "dataFromSuccess" : {
-                    "type" : "variable"
-                  },
-                  "closeOnSuccess" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "modalId" : {
-                    "type" : "constant",
-                    "value" : ""
                   }
                 },
-                "reference" : "07277eaa-2165-44ff-b1aa-2d6902089b89",
+                "reference" : "edb9ec6d-1e94-43f7-b425-5097ca4c6f12",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -717,7 +791,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "8e0bad79-e7b1-4922-9c71-e164e71f1404",
+                "reference" : "9e3f3734-ed97-4dde-89f1-d5f0d53fddeb",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -761,8 +835,6 @@
         "\t\t\tfechaRegistro: $data.registroDiario.fechaRegistro !== undefined ? $data.registroDiario.fechaRegistro : null,",
         "\t\t\tpeso: $data.registroDiario.peso !== undefined ? $data.registroDiario.peso : null,",
         "\t\t\ttensionArterial: $data.registroDiario.tensionArterial !== undefined ? $data.registroDiario.tensionArterial : null,",
-        "\t\t\tultraFiltracion: $data.registroDiario.ultraFiltracion !== undefined ? $data.registroDiario.ultraFiltracion : null,",
-        "\t\t\taspectoLiquido: $data.registroDiario.aspectoLiquido !== undefined ? $data.registroDiario.aspectoLiquido : null,",
         "\t\t\tintegridadOrificio: $data.registroDiario.integridadOrificio !== undefined ? $data.registroDiario.integridadOrificio : null",
         "\t\t}",
         "\t}",
@@ -794,14 +866,14 @@
   },
   "assets" : [
     {
-      "id" : "1ef3d11b-5edb-4ed1-9c0b-e9e7867110b6",
+      "id" : "6111afbd-cfcd-43fa-bd05-f7cdb0daf7d0",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "eb27026c-6012-4e12-a747-2c4102f7f708",
+      "id" : "bbed1ca0-35b4-4fe6-9604-28c71676bffc",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
